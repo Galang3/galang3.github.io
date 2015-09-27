@@ -1,2 +1,2 @@
 # galang23.github.io
-Website-ku sendiri!
+Website-ku sendiri untuk pertama kalinya!
