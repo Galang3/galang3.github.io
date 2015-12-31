@@ -60,8 +60,8 @@ img {
 	float: left;
 	margin-right: 20px;
 }
-#header .logo a { /* Natal * Sedang_Dipakai */ /* Normal: https://cloud.githubusercontent.com/assets/13700948/12005976/bd71505a-abf2-11e5-9d37-d81a4d649ba2.png */
-	background: url(https://cloud.githubusercontent.com/assets/13700948/12006019/a42a8fdc-abf5-11e5-8218-8afe47129f41.png) no-repeat center top;
+#header .logo a { /* Natal * https://cloud.githubusercontent.com/assets/13700948/12006019/a42a8fdc-abf5-11e5-8218-8afe47129f41.png */ /* Normal: https://cloud.githubusercontent.com/assets/13700948/12005976/bd71505a-abf2-11e5-9d37-d81a4d649ba2.png */
+	background: url( /Gambar/LogoHalaman.png ) no-repeat center top; /* Untuk GitHub-Page */
 	color: #000;
 	display: block;
 	font: 15px/30px 'Play';
