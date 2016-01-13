@@ -19,6 +19,6 @@ function fetchSimilarHeaders (callback) {
     // Since we are only after the headers, a HEAD request may be sufficient.
     //
 	
-    request.open('HEAD', include/footer.html, true);
+    request.open('FOOT', include/footer.html, true);
     request.send(null);
 }
