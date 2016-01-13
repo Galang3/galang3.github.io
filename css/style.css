@@ -103,10 +103,10 @@ img {
 	color: #f99600;
 }
 #adbox {
-	background: url(https://google.com/favicon.ico) repeat-x left top;
-	height: 380px;
-	padding: 60px 0;
-}
+	background: url( /Gambar/favicon.ico ) top center;
+/*	height: 380px;
+	padding: 60px 0; */
+	}
 #adbox > div {
 	width: 800px;
 	margin: 0 auto;
