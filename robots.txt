@@ -85,9 +85,9 @@ Allow: /news.html
 Disallow: /post.html
 Disallow: /index2.html
 Disallow: features.html
-Disallow: /images 
-Disallow: /css
-Disallow: /fonts
+Allow: /images 
+Allow: /css
+Allow: /fonts
 
 User-agent: ia_archiver
 Allow: /index.html
