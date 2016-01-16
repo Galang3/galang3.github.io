@@ -64,7 +64,7 @@ Disallow: /css/
 Disallow: /fonts/
 
 User-agent: Googlebot
-Allow: /index.html
+Disallow: /
 Allow: /about.html
 Disallow: /contact.html
 Disallow: /tugas-sekolah/*
