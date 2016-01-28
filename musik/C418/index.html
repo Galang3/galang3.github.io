@@ -1,19 +1,214 @@
-<html>
-<head>
-	<link rel="icon" href="/Gambar/favicon.ico" />
-	<title>Index Of /Musik/C418 </title>
-	<link rel="stylesheet" href="/css/style.css" />
+<html><head>
+<meta charset="UTF-8">
+<style type="text/css">
+:root {
+  font-family: sans-serif;
+}
+img {
+  border: 0;
+}
+th {
+  text-align: start;
+  white-space: nowrap;
+}
+th > a {
+  color: inherit;
+}
+table[order] > thead > tr > th {
+  cursor: pointer;
+}
+table[order] > thead > tr > th::after {
+  display: none;
+  width: .8em;
+  -moz-margin-end: -.8em;
+  text-align: end;
+}
+table[order="asc"] > thead > tr > th::after {
+  content: "\2193"; /* DOWNWARDS ARROW (U+2193) */
+}
+table[order="desc"] > thead > tr > th::after {
+  content: "\2191"; /* UPWARDS ARROW (U+2191) */
+}
+table[order][order-by="0"] > thead > tr > th:first-child > a ,
+table[order][order-by="1"] > thead > tr > th:first-child + th > a ,
+table[order][order-by="2"] > thead > tr > th:first-child + th + th > a {
+  text-decoration: underline;
+}
+table[order][order-by="0"] > thead > tr > th:first-child::after ,
+table[order][order-by="1"] > thead > tr > th:first-child + th::after ,
+table[order][order-by="2"] > thead > tr > th:first-child + th + th::after {
+  display: inline-block;
+}
+table.remove-hidden > tbody > tr.hidden-object {
+  display: none;
+}
+td {
+  white-space: nowrap;
+}
+table.ellipsis {
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 0;
+}
+table.ellipsis > tbody > tr > td {
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* name */
+/* name */
+th:first-child {
+  -moz-padding-end: 2em;
+}
+/* size */
+th:first-child + th {
+  -moz-padding-end: 1em;
+}
+td:first-child + td {
+  text-align: end;
+  -moz-padding-end: 1em;
+}
+/* date */
+td:first-child + td + td {
+  -moz-padding-start: 1em;
+  -moz-padding-end: .5em;
+}
+/* time */
+td:first-child + td + td + td {
+  -moz-padding-start: .5em;
+}
+.symlink {
+  font-style: italic;
+}
+.dir ,
+.symlink ,
+.file {
+  -moz-margin-start: 20px;
+}
+.dir::before ,
+.file > img {
+  -moz-margin-end: 4px;
+  -moz-margin-start: -20px;
+  max-width: 16px;
+  max-height: 16px;
+  vertical-align: middle;
+}
+.dir::before {
+  content: url(resource://gre/res/html/folder.png);
+}
+</style>
+<link rel="stylesheet" media="screen, projection" type="text/css" href="chrome://global/skin/dirListing/dirListing.css">
+<script type="application/javascript">
+'use strict';
+var gTable, gOrderBy, gTBody, gRows, gUI_showHidden;
+document.addEventListener("DOMContentLoaded", function() {
+  gTable = document.getElementsByTagName("table")[0];
+  gTBody = gTable.tBodies[0];
+  if (gTBody.rows.length < 2)
+    return;
+  gUI_showHidden = document.getElementById("UI_showHidden");
+  var headCells = gTable.tHead.rows[0].cells,
+      hiddenObjects = false;
+  function rowAction(i) {
+    return function(event) {
+      event.preventDefault();
+      orderBy(i);
+    }
+  }
+  for (var i = headCells.length - 1; i >= 0; i--) {
+    var anchor = document.createElement("a");
+    anchor.href = "";
+    anchor.appendChild(headCells[i].firstChild);
+    headCells[i].appendChild(anchor);
+    headCells[i].addEventListener("click", rowAction(i), true);
+  }
+  if (gUI_showHidden) {
+    gRows = Array.slice(gTBody.rows);
+    hiddenObjects = gRows.some(row => row.className == "hidden-object");
+  }
+  gTable.setAttribute("order", "");
+  if (hiddenObjects) {
+    gUI_showHidden.style.display = "block";
+    updateHidden();
+  }
+}, "false");
+function compareRows(rowA, rowB) {
+  var a = rowA.cells[gOrderBy].getAttribute("sortable-data") || "";
+  var b = rowB.cells[gOrderBy].getAttribute("sortable-data") || "";
+  var intA = +a;
+  var intB = +b;
+  if (a == intA && b == intB) {
+    a = intA;
+    b = intB;
+  } else {
+    a = a.toLowerCase();
+    b = b.toLowerCase();
+  }
+  if (a < b)
+    return -1;
+  if (a > b)
+    return 1;
+  return 0;
+}
+function orderBy(column) {
+  if (!gRows)
+    gRows = Array.slice(gTBody.rows);
+  var order;
+  if (gOrderBy == column) {
+    order = gTable.getAttribute("order") == "asc" ? "desc" : "asc";
+  } else {
+    order = "asc";
+    gOrderBy = column;
+    gTable.setAttribute("order-by", column);
+    gRows.sort(compareRows);
+  }
+  gTable.removeChild(gTBody);
+  gTable.setAttribute("order", order);
+  if (order == "asc")
+    for (var i = 0; i < gRows.length; i++)
+      gTBody.appendChild(gRows[i]);
+  else
+    for (var i = gRows.length - 1; i >= 0; i--)
+      gTBody.appendChild(gRows[i]);
+  gTable.appendChild(gTBody);
+}
+function updateHidden() {
+  gTable.className = gUI_showHidden.getElementsByTagName("input")[0].checked ?
+                     "" :
+                     "remove-hidden";
+}
+</script>
+<link rel="icon" href="/Gambar/favicon.ico">
+<title>Daftar Isi file:///D:/OpenAL'/</title>
+<base href="/musik/C418">
 </head>
-<body>
-	<h1>Index Of /Musik/C418</h1>
-	<p>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
-	<pre>
-	<a id="box" href="Cat.mp3" type="audio/mpeg3">Cat.mp3</a><br/>
-	<a id="box" href="Dog.mp3" type="audio/mpeg3">Dog.mp3</a><br/>
-	<a id="box" href="Subwoofer-Lullaby.mp3" type="audio/mpeg3">Subwoofer Lullaby.mp3</a><br/>
-	<a id="box" href="Wet-Hands.mp3">Wet-Hands.mp3</a>
-	</pre>
-	<p>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
-	<a href="/"><p>Galang23</p></a>
-	</body>
+<body dir="ltr">
+<h1>Daftar Isi /musik/C418/</h1>
+<p id="UI_goUp"><a href="/musik/" class="up">Naik ke direktori di atasnya</a></p>
+<p id="UI_showHidden" style="display:none"><label><input checked="" onchange="updateHidden()" type="checkbox">Tampilkan objek tersembunyi</label></p>
+<table>
+ <thead>
+  <tr>
+   <th>Nama</th>
+   <th>Besar</th>
+   <th colspan="2">Modifikasi Terakhir</th>
+  </tr>
+ </thead>
+ <tbody>
+<tr>
+ <td sortable-data="alinst.exe">
+						<table class="ellipsis">
+							<tbody>
+									<tr><td><a href="Cat.mp3" class="file"><img src="moz-icon://.mp3?size=16" alt="Berkas: "/>Cat.mp3</a></td>
+									</tr>
+							</tbody>
+						</table>
+					</td>
+				<td sortable-data="2985107">2,84 MB</td>
+				<td sortable-data="1444811175000000">5 November 2015</td>
+				<td>20:44:28</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
 </html>
