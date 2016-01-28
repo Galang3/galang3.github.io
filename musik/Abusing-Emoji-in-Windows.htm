@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Abusing Emoji in Windows</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css?v=2d67e4794d" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="http://davidzych.com/abusing-emoji-in-windows/" />
+    
+    <meta property="og:site_name" content="David Zych" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Abusing Emoji in Windows" />
+    <meta property="og:description" content="Inspired by this post by Zach Holman, let&#x27;s see what Windows 10 will allow us to use emoji for.  First... some history Unicode Most computer systems today (e.g. Windows, OSX, Android, iOS) use a thing called Unicode to represent..." />
+    <meta property="og:url" content="http://davidzych.com/abusing-emoji-in-windows/" />
+    <meta property="og:image" content="http://davidzych.com/content/images/2015/10/post_image.png" />
+    <meta property="article:published_time" content="2015-10-19T16:06:03.366Z" />
+    <meta property="article:modified_time" content="2015-10-19T20:25:38.997Z" />
+    <meta property="article:tag" content="windows 10" />
+    <meta property="article:tag" content="emoji" />
+    <meta property="article:tag" content="abuse" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Abusing Emoji in Windows" />
+    <meta name="twitter:description" content="Inspired by this post by Zach Holman, let&#x27;s see what Windows 10 will allow us to use emoji for.  First... some history Unicode Most computer systems today (e.g. Windows, OSX, Android, iOS) use a thing called Unicode to represent..." />
+    <meta name="twitter:url" content="http://davidzych.com/abusing-emoji-in-windows/" />
+    <meta name="twitter:image:src" content="http://davidzych.com/content/images/2015/10/post_image.png" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "David Zych",
+    "author": {
+        "@type": "Person",
+        "name": "David Zych",
+        "image": "//www.gravatar.com/avatar/499605b887254f196fddfa8cff22233b?s=250&d=mm&r=x",
+        "url": "http://davidzych.com/author/david",
+        "sameAs": "http://twitter.com/davezych"
+    },
+    "headline": "Abusing Emoji in Windows",
+    "url": "http://davidzych.com/abusing-emoji-in-windows/",
+    "datePublished": "2015-10-19T16:06:03.366Z",
+    "dateModified": "2015-10-19T20:25:38.997Z",
+    "image": "http://davidzych.com/content/images/2015/10/post_image.png",
+    "keywords": "windows 10, emoji, abuse",
+    "description": "Inspired by this post by Zach Holman, let&#x27;s see what Windows 10 will allow us to use emoji for.  First... some history Unicode Most computer systems today (e.g. Windows, OSX, Android, iOS) use a thing called Unicode to represent..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.5" />
+    <link rel="alternate" type="application/rss+xml" title="David Zych" href="http://davidzych.com/rss/" />
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-50377527-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body class="post-template tag-windows-10 tag-emoji tag-abuse">
+
+    
+
+
+<header class="main-header post-head " style="background-image: url(/content/images/2015/10/post_image.png)">
+    <nav class="main-nav overlay clearfix">
+        <a class="back-button icon-arrow-left" href="http://davidzych.com">Home</a>
+        <a class="subscribe-button icon-feed" href="http://feeds.feedburner.com/DavidZych">Subscribe</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-windows-10 tag-emoji tag-abuse">
+
+        <header class="post-header">
+            <h1 class="post-title">Abusing Emoji in Windows</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-10-19">19 October 2015</time>  on <a href="/tag/windows-10/">windows 10</a>, <a href="/tag/emoji/">emoji</a>, <a href="/tag/abuse/">abuse</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>Inspired by <a href="http://zachholman.com/posts/abusing-emoji/">this post by Zach Holman</a>, let's see what Windows 10 will allow us to use emoji for. </p>
+
+<h1 id="firstsomehistory">First... some history</h1>
+
+<h4 id="unicode">Unicode</h4>
+
+<p>Most computer systems today (e.g. Windows, OSX, Android, iOS) use a thing called Unicode to represent text. Since computers work in binary, there needs to be a way to take a string of binary and convert it to letters and numbers to display on the screen. Unicode is one way to do that, and any system that uses Unicode knows that  <code>01000001</code> is the capital letter <code>A</code>.</p>
+
+<h4 id="emoji">Emoji</h4>
+
+<p><a href="https://www.google.com/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=define%3Aemoji">An emoji is:</a></p>
+
+<blockquote>
+  <p>a small digital image or icon used to express an idea, emotion, etc., in electronic communication.</p>
+</blockquote>
+
+<p>So basically these:</p>
+
+<blockquote>
+  <p>👔 💪 👶 🎅 💣 🍔 🚂 🎰</p>
+</blockquote>
+
+<p>A few years ago some people were trying to send messages to each other and one of them was like (keep in mind I'm totally guessing here, but I'm 99% sure this is exactly how it happened)</p>
+
+<blockquote>
+  <p>Hey, I'm tired of typing lol. I wish I could send someone a picture of a laughing head</p>
+</blockquote>
+
+<p>And so they came up with emoji. Then some more people* were like</p>
+
+<blockquote>
+  <p>We need to standardize this shit</p>
+</blockquote>
+
+<p>and so they made a whole unicode character set just for emoji. And now anytime you're on Tinder and talking to a chick you can just send over the character <code>U+1F4AA</code> which is</p>
+
+<blockquote>
+  <p>💪</p>
+</blockquote>
+
+<p>and she'll clearly be all over you because not only do you have ripped biceps but you also know how to make proper use of emoji and that's a major turn on.</p>
+
+<p>Anyway...</p>
+
+<p>Since all of these emoji are part of the Unicode standard it means that emoji is essentially text, and it can be typed into anywhere normal text can be typed into, which means we can now put them in lots of funny places.</p>
+
+<p>The easiest way to enter emoji in Windows is to enable the <a href="http://www.hanselman.com/blog/HowToEnterAndUseEmojiOnWindows81.aspx">Touch Keyboard</a>. Alternatively, you could also copy the emoji text straight from the <a href="http://unicode.org/emoji/charts/full-emoji-list.html">full emoji list straight from Unicode.org</a></p>
+
+<h1 id="letshavesomefun">Let's have some fun</h1>
+
+<h5 id="files">Files</h5>
+
+<p>The NTFS file system that Windows uses <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd317748(v=vs.85).aspx">stores file names in Unicode.</a> That means we can save a file named the <a href="http://unicode.org/emoji/charts/full-emoji-list.html#270c">victory hand</a> (✌️):</p>
+
+<p><img src="/content/images/2015/10/1_victoryfingers.png" alt="" /></p>
+
+<p>But file extensions are <em>also</em> unicode, so we can also save a file with 2 <a href="http://unicode.org/emoji/charts/full-emoji-list.html#270b">hands high fiving</a> each other over the dot:</p>
+
+<p><img src="/content/images/2015/10/2_highfive.png" alt="" /></p>
+
+<h5 id="shortcuts">Shortcuts</h5>
+
+<p>Shortcuts to programs can also be emoji, so you can name your recycle bin the literal recycle symbol ♻️:</p>
+
+<p><img src="/content/images/2015/10/8_recyclebin.png" alt="" /></p>
+
+<p>Or you can name it an octopus 🐙 which is fitting because those things are disgusting and should be thrown out.</p>
+
+<p><img src="/content/images/2015/10/11_octopi.png" alt="" /></p>
+
+<h5 id="applications">Applications</h5>
+
+<p>I renamed my notepad++ app to 🍦. Now if it crashes I can yell "oh shit, my ice cream is melting!"</p>
+
+<p><img src="/content/images/2015/10/10_icecreampad.png" alt="" /></p>
+
+<h5 id="startmenu">Start menu</h5>
+
+<p>You can also name a group on the start menu with emoji. I named my group "cool 💩":</p>
+
+<p><img src="/content/images/2015/10/9_coolshit.png" alt="" /></p>
+
+<h5 id="useraccounts">User Accounts</h5>
+
+<p>Windows user accounts also accept emoji. Which means your account name can be the <a href="https://en.wikipedia.org/wiki/Three_wise_monkeys">see no evil hear no evil speak no evil monkeys</a>:</p>
+
+<p><img src="/content/images/2015/10/3_hearnospeaknoseeno.png" alt="" /></p>
+
+<p>and every time you sign in you get to see your cute little monkeys:</p>
+
+<p><img src="/content/images/2015/10/4_login.png" alt="" /></p>
+
+<p>Surprisingly, Windows couldn't care less that your account name is a picture of 3 monkeys. It even shows it as your home directory:</p>
+
+<p><img src="/content/images/2015/10/13_homedir.png" alt="" /></p>
+
+<h5 id="passwords">Passwords</h5>
+
+<p>You can <em>also</em> set your password using emoji. You can set it to something like this firework symbol so you can literally login with a bang:</p>
+
+<p><img src="/content/images/2015/10/5_loginwithabang.png" alt="" /></p>
+
+<p>But just like in OSX, it's almost impossible to enter emoji at the login screen so sadly you can't sign in with that password. My monkey account is now lost forever. 🙍</p>
+
+<h5 id="time">Time</h5>
+
+<p>You can change the time settings to use emoji. I set AM to show as 🍩 and PM to show as 🍻.</p>
+
+<p><img src="/content/images/2015/10/12_time.png" alt="" /></p>
+
+<p>Now I'll always know whether it's socially acceptable to eat donuts or drink beer. </p>
+
+<h5 id="computername">Computer Name</h5>
+
+<p>You can set your computer name using emoji. I set mine to a castle:</p>
+
+<p><img src="/content/images/2015/10/6_castlecomputer.png" alt="" /></p>
+
+<p>Now when you want to share things with your friends, you can proclaim "<em>welcome to my kingdom</em>":</p>
+
+<p><img src="/content/images/2015/10/7_castlenetwork.png" alt="" /></p>
+
+<p>You could also set up strict firewall rules and make moat jokes if you prefer. 🌊</p>
+
+<h3 id="">💡</h3>
+
+<p>As you can see, Windows allows us to make use of emoji pretty much everywhere and it doesn't care. Have fun with this newfound knowledge.  </p>
+
+<hr />
+
+<p>* Those people were the <a href="http://unicode.org/">Unicode Consortium</a>. They decide what goes into Unicode, so thank them for all your emoji.</p>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="/author/david/" style="background-image: url(//www.gravatar.com/avatar/499605b887254f196fddfa8cff22233b?s=250&amp;d=mm&amp;r=x)"><span class="hidden">David Zych's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="/author/david/">David Zych</a></h4>
+
+                    <p>Dave is a dad, husband, programmer, (amateur) photographer, half-Canadian, guitarist, alumnus of CSU Channel Islands, hiker, and an overall nice guy. </p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">Ventura, CA</span>
+                    <span class="author-link icon-link"><a href="http://twitter.com/davezych">http://twitter.com/davezych</a></span>
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=Abusing%20Emoji%20in%20Windows&amp;url=http://davidzych.com/abusing-emoji-in-windows/"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://davidzych.com/abusing-emoji-in-windows/"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://davidzych.com/abusing-emoji-in-windows/"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'davidzych';
+            var disqus_identifier = '';
+   
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </article>
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="http://davidzych.com">David Zych</a> &copy; 2016</section>
+        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+    </footer>
+
+    <script src="/public/jquery.min.js?v=2d67e4794d"></script>
+
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js?v=2d67e4794d"></script>
+    <script type="text/javascript" src="/assets/js/index.js?v=2d67e4794d"></script>
+
+</body>
+</html>
