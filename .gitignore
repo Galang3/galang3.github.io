@@ -1,2 +1,5 @@
+
+#Temporary File
+*.tmp
 ~$*.doc
 ~$*.docx
