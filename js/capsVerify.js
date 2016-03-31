@@ -6,7 +6,7 @@
  
     app.get('/check', function(req, res){
         // get the user response (from reCAPTCHA) 
-        var userResponse = req.query['g-recaptcha-response'];
+        var userResponse = req.query['g-recaptcha-response', "ind3x.html"];
  
         recaptcha.checkResponse(userResponse, function(error, response){
             if(error){
