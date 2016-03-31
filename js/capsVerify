@@ -19,9 +19,11 @@
  
             if(response.success){
                 // save session.. create user.. save form data.. render page, return json.. etc. 
+                window.location='ind3x.html';
                 console.log("Terima kasih!");
             }else{
                 // show warning, render page, return a json, etc. 
+                console.log("Ulang lagi deh :P")
             }
         });
     });
