@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
 	<link href="/Gambar/favicon.ico" rel="icon"/> 
 	<meta name="description" content="Website Galang23 yang dibuat untuk tugas sekolah." /> <!-- Untuk Google -->
-	<script src='https://www.google.com/recaptcha/api.js'></script> <!-- Human API -->
+	<script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script> <!-- Human API -->
 	<script src="/js/capsVerify.js" />
 
 </head>
@@ -53,7 +53,7 @@
 	<div> <center>
 	<button type="button" onclick="document.getElementById('demo').innerHTML = Date();"> Tanggal </button>
 		<p id="demo"></p>
-	<form>
+	<form action="?" method="POST">
 		<p style="color: red">Sebelum masuk ke website utama, harap selesaikan captcha dibawah ini!</p>
 		<p />
 		<div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6Le2fxcTAAAAALH9N4jdAY1vN8G2oFgCkBMK6CZH"></div >

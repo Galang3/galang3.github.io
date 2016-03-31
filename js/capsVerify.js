@@ -1,16 +1,17 @@
-   // var Recaptcha = require('recaptcha');
+/* 
+ var Recaptcha = require('recaptcha');
     var recaptcha = new Recaptcha({
         secret: '6Le2fxcTAAAAALPmslDGpdstvVMfabMse-RXac2E',
         verbose: false
     });
     app.get('/check', function(req, res){
         // get the user response (from reCAPTCHA) 
-        var userResponse = req.query['g-recaptcha-response', "ind3x.html"];
+        var userResponse = req.query['g-recaptcha-response'];
  
         recaptcha.checkResponse(userResponse, function(error, response){
             if(error){
                 // an internal error? 
-                res.status(400).render('400', {
+                res.status(400).render('400') {
                     message: error.toString()
                 });
                 return;
@@ -26,3 +27,9 @@
             }
         });
     });
+*/
+var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '6Le2fxcTAAAAALPmslDGpdstvVMfabMse-RXac2E'
+        });
+    };
