@@ -8,6 +8,11 @@
 	<link href="/Gambar/favicon.ico" rel="icon"/> 
 	<meta name="description" content="Website Galang23 yang dibuat untuk tugas sekolah." /> <!-- Untuk Google -->
 	<script src='https://www.google.com/recaptcha/api.js'></script> <!-- Human API -->
+	<script>
+		function recaptchaCallback() {
+    		$('#submitBtn').removeAttr('disabled');
+		};
+	</script>
 </head>
 <body>
 <!-- div id="header">
@@ -51,13 +56,13 @@
 	<div> <center>
 	<button type="button" onclick="document.getElementById('demo').innerHTML = Date();"> Tanggal </button>
 		<p id="demo"></p>
-		<form>
+	<form>
 		<p style="color: red">Sebelum masuk ke website utama, harap selesaikan captcha dibawah ini!</p>
 		<p />
-		<div class="g-recaptcha" data-sitekey="6Le2fxcTAAAAALH9N4jdAY1vN8G2oFgCkBMK6CZH"></div >
+		<div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6Le2fxcTAAAAALH9N4jdAY1vN8G2oFgCkBMK6CZH"></div >
 		<!--div class="g-recaptcha" data-sitekey="6Lcd3BsTAAAAAMXnv-r7KXbV72Jc000YTydJCfTM"></div -->
 		<p />
-		<a href="/ind3x.html"><button type="button">Verifikasi</button></a>
+		<a href="/ind3x.html"><button id="submitBtn" disabled>Submit</button></a>
 	</form>
 	</div> </center>
 	<div id="adbox">
