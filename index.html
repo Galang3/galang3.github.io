@@ -8,11 +8,7 @@
 	<link href="/Gambar/favicon.ico" rel="icon"/> 
 	<meta name="description" content="Website Galang23 yang dibuat untuk tugas sekolah." /> <!-- Untuk Google -->
 	<script src='https://www.google.com/recaptcha/api.js'></script> <!-- Human API -->
-	<script>
-		function recaptchaCallback() {
-    		$('#submitBtn').removeAttr('disabled');
-		};
-	</script>
+
 </head>
 <body>
 <!-- div id="header">
@@ -63,6 +59,11 @@
 		<!--div class="g-recaptcha" data-sitekey="6Lcd3BsTAAAAAMXnv-r7KXbV72Jc000YTydJCfTM"></div -->
 		<p />
 		<a href="/ind3x.html"><button id="submitBtn" disabled>Submit</button></a>
+		<script>
+		function recaptchaCallback() {
+    		$('#submitBtn').removeAttr('disabled');
+		};
+		</script>
 	</form>
 	</div> </center>
 	<div id="adbox">
