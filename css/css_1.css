@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  p {
+    color: #66FF00;
+  }
+  a {
+    color: #00FF00;
+  }
+ p.a {
+    color: #9966CC;
+  }
