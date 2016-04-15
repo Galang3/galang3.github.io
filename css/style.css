@@ -246,6 +246,11 @@ p a {
 	width: 620px;
 	padding-right: 24px;
 }
+.015-beta {
+	background-image: url("https://media.mojang.com/blog-image/79350dbfda8ce3e820af56bfe5b4f01149a1fa52/realms_beta2.png");
+	width: 480px;
+	height: 300px;
+}
 .main h1, .sidebar h1 {
 	margin: 0 0 12px;
 	position: relative;
