@@ -61,11 +61,29 @@ World
 
 function cek(){
     if (jawaban3.checked && pert2kol1.checked){
-    document.getElementById("Result").innerHTML = "fuck";
+    document.getElementById("Result").innerHTML = "fuck" ;
 	document.title = "Secret Key...";
     }else{ //if (jawaban3.checked = false && pert2kol1.checked = false){
 		document.getElementById("Result").innerHTML = "Coba Lagi ;-)";
 		document.getElementById("false").innerHTML = '<button onclick="history.back()">Kembali </button>';
 		document.title = "Oops!";
 	}
+}
+
+//other functions here
+function addRow() {
+    var div = document.createElement('div');
+
+    div.className = 'row';
+
+    div.innerHTML = '<input type="text" name="name" value="" />\
+        <input type="text" name="value" value="" />\
+        <label> <input type="checkbox" name="check" value="1" /> Checked? </label>\
+        <input type="button" value="-" onclick="removeRow(this)">';
+
+     document.getElementById('content').appendChild(div);
+}
+
+function removeRow(input) {
+    document.getElementById('content').removeChild( input.parentNode );
 }
