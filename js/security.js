@@ -81,7 +81,7 @@ function addRow() {
         <label> <input type="checkbox" name="check" value="1" /> Checked? </label>\
         <input type="button" value="-" onclick="removeRow(this)">';
 
-     document.getElementById('content').appendChild(div);
+     //document.getElementById('content').appendChild(div);
 }
 
 function removeRow(input) {
