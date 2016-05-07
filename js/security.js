@@ -65,7 +65,7 @@ function cek(){
 	document.title = "Secret Key...";
     }else{ //if (jawaban3.checked = false && pert2kol1.checked = false){
 		document.getElementById("Result").innerHTML = "Coba Lagi ;-)";
-		document.getElementById("false").innerHTML = "<button onclick="history.back()">Kembali </button>";
+		document.getElementById("false").innerHTML = '<button onclick="history.back()">Kembali </button>';
 		document.title = "Oops!";
 	}
 }
