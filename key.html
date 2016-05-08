@@ -1,27 +1,30 @@
 <html>
 	<head>
+		<meta charset="UTF-8" />
 		<script src="/js/security.js"></script>
 		<title>Verifikasi Keamanan</title>
 		<link href="/Gambar/favicon.ico" rel="icon" />
+		<meta http-equiv="refresh" content='20' />
 	</head>
-	<body id="Result">
-	 <noscript style="color: red;"><b>HARAP AKTIFKAN JavaScript UNTUK MELANJUTKAN</b></noscript>
-	<p>Harap jawab beberapa pertanyaan berikut untuk melanjutkan</p>
-	<form>
-		Siapakah Galang23?<br>
-		<input type="radio" name="pertanyaan1" id="jawaban3">Seekor Manusia<br>
-		<input type="radio" name="pertanyaan1" id="jawaban4">Seorang Manusia<br>
-		<input type="radio" name="pertanyaan1" id="jawaban2">Satu Manusia<br>
-		<input type="radio" name="pertanyaan1" id="jawaban1">Manusia<br>
-	</form>
-	<form>
-		Apakah kamu jomblo?<br/>
-		<input type="radio" name="pertanyaan2" id="pert2kol3">Ya<br/>
-		<input type="radio" name="pertanyaan2" id="pert2kol4">Tidak<br/>
-		<input type="radio" name="pertanyaan2" id="pert2kol1">Entah<br/>
-		<input type="radio" name="pertanyaan2" id="pert2kol2">Sudah punya<br/>
-	</form>
-	<button onclick="cek()">Cek Jawaban</button>
-	<button onclick="addRow()">iseng</button>
+	<body>
+		<div id='Result' >
+			<noscript style="color: red;"><b>HARAP AKTIFKAN JavaScript UNTUK MELANJUTKAN</b></noscript>
+			<p>Harap jawab beberapa pertanyaan berikut untuk melanjutkan</p>
+			<form>
+				Siapakah Galang23?<br>
+				<input type="radio" name="pertanyaan1" id="jawaban3">Seekor Manusia<br>
+				<input type="radio" name="pertanyaan1" id="jawaban4">Seorang Manusia<br>
+				<input type="radio" name="pertanyaan1" id="jawaban2">Satu Manusia<br>
+				<input type="radio" name="pertanyaan1" id="jawaban1">Manusia<br>
+			</form>
+			<form>
+				Apakah kamu jomblo?<br/>
+				<input type="radio" name="pertanyaan2" id="pert2kol3">Ya<br/>
+				<input type="radio" name="pertanyaan2" id="pert2kol4">Tidak<br/>
+				<input type="radio" name="pertanyaan2" id="pert2kol1">Entah<br/>
+				<input type="radio" name="pertanyaan2" id="pert2kol2">Sudah punya<br/>
+			</form>
+			<button onclick="cek()">Cek Jawaban</button>
+		</div>	
 	</body>
 </html>
