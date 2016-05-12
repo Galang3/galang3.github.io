@@ -1,4 +1,5 @@
 /* Website template by freewebsitetemplates.com */
+
 @font-face {
 	font-family: 'OpenSans';
 	src: url('../fonts/OpenSans-Regular.eot');
@@ -60,8 +61,8 @@ img {
 	float: left;
 	margin-right: 20px;
 }
-#header .logo a { /* Natal * https://cloud.githubusercontent.com/assets/13700948/12006019/a42a8fdc-abf5-11e5-8218-8afe47129f41.png */ /* Normal: https://cloud.githubusercontent.com/assets/13700948/12005976/bd71505a-abf2-11e5-9d37-d81a4d649ba2.png */ /*** RALAT, *** /Gambar/LogoNatal.png untuk Natal; /Gambar/LogoHalaman.png untuk Logo biasanya */
-	background: url( /Gambar/LogoHalaman.png ) no-repeat center top; /* Untuk GitHub-Page */
+#header .logo a {
+	background: url(../Gambar/LogoHalaman.png) no-repeat center top;
 	color: #000;
 	display: block;
 	font: 15px/30px 'Play';
@@ -72,6 +73,14 @@ img {
 	text-transform: uppercase;
 }
 /** Navigation **/
+#box {
+	width: 200px;
+	margin: 2px auto;
+	padding: 0 80px;
+	border: 3px solid grey;
+	font-family: Arial;
+	/*border-color: solid grey;*/
+}
 #navigation {
 	display: inline-block;
 	list-style: none;
@@ -103,10 +112,10 @@ img {
 	color: #f99600;
 }
 #adbox {
-	background: url(localhost) top center;
-/*	height: 380px;
-	padding: 60px 0; */
-	}
+	background: url(../images/bg-adbox.jpg) repeat-x left top;
+	height: 380px;
+	padding: 60px 0;
+}
 #adbox > div {
 	width: 800px;
 	margin: 0 auto;
@@ -146,16 +155,10 @@ img {
 	width: 256px;
 }
 /*------------------------------ CONTENTS ------------------------------*/
- #box {
-    width: 320px;
-    padding: 10px;
-    border: 5px solid grey;
-    margin: -5px;
-}
 #contents {
 	min-height: 510px;
 	width: 880px;
-	margin: -5 auto;
+	margin: 0 auto;
 	padding: 54px 40px;
 }
 h1 {
@@ -165,7 +168,6 @@ h1 {
 	line-height: 30px;
 	margin: 0 0 30px;
 }
-
 h2 {
 	color: #2c2c2c;
 	font-size: 24px;
@@ -245,11 +247,6 @@ p a {
 	min-height: 100px;
 	width: 620px;
 	padding-right: 24px;
-}
-.015-beta {
-	background-image: url("https://media.mojang.com/blog-image/79350dbfda8ce3e820af56bfe5b4f01149a1fa52/realms_beta2.png");
-	width: 480px;
-	height: 300px;
 }
 .main h1, .sidebar h1 {
 	margin: 0 0 12px;
@@ -413,4 +410,3 @@ p a {
 #connect a.tumbler:hover {
 	background-position: -40px -120px;
 }
-/************** END OF CSS **************/
